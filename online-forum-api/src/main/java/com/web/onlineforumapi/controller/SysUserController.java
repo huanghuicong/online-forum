@@ -22,6 +22,7 @@ public class SysUserController {
     @GetMapping(value = "/findUser")
     public ResultData getElectricityMonthReport() {
         List<SysUser> userList = sysUserService.findUser();
+        System.out.println("git测试");
         return ResultData.success(userList);
     }
 }
