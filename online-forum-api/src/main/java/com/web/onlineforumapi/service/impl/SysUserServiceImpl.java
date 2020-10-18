@@ -46,7 +46,7 @@ public class SysUserServiceImpl implements SysUserService {
         return uuid;
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void testTran() {
         SysUser sysUser1 = new SysUser();
         sysUser1.setId(4L);
