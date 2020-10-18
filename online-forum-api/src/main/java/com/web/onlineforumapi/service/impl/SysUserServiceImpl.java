@@ -1,8 +1,11 @@
 package com.web.onlineforumapi.service.impl;
 
+import com.web.onlineforumapi.common.BusinessException;
+import com.web.onlineforumapi.common.ResponseEnum;
 import com.web.onlineforumapi.dao.SysUserDao;
 import com.web.onlineforumapi.domain.SysUser;
 import com.web.onlineforumapi.service.SysUserService;
+import com.web.onlineforumapi.util.MD5Util;
 import com.web.onlineforumapi.util.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +32,18 @@ public class SysUserServiceImpl implements SysUserService {
     public List<SysUser> findUser() {
         List<SysUser> sysUserList = sysUserDao.findUserList();
         return sysUserList;
+    }
+
+    @Override
+    public String login(SysUser sysUser) {
+        SysUser user = sysUserDao.findUser(sysUser);
+        String uuid = MD5Util.returnUuid();
+        if (user == null) {
+            throw new BusinessException("用户名密码错误", ResponseEnum.FAIL.getCode());
+        } else {
+            redisUtil.set(uuid, user.getId());
+        }
+        return uuid;
     }
 
     @Transactional

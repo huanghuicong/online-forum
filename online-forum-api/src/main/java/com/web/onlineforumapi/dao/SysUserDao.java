@@ -12,4 +12,6 @@ public interface SysUserDao {
     public SysUser findUserById(Long userId);
 
     public void insertUser(@Param("sysUser") SysUser sysUser);
+
+    public SysUser findUser(@Param("sysUser") SysUser sysUser);
 }

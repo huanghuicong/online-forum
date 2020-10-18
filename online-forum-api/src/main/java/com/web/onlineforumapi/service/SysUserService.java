@@ -8,4 +8,5 @@ public interface SysUserService {
 
     public List<SysUser> findUser();
 
+    public String login(SysUser sysUser);
 }

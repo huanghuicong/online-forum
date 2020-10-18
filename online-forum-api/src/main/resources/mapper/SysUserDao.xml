@@ -20,6 +20,11 @@
         from sys_user where id = #{userId}
     </select>
 
+    <select id="findUser" resultMap="userMap" parameterType="com.web.onlineforumapi.domain.SysUser">
+        select id, user_name, password
+        from sys_user where user_name = #{sysUser.userName} and password = #{sysUser.password}
+    </select>
+
     <insert id="insertUser" parameterType="com.web.onlineforumapi.domain.SysUser">
         insert into sys_user (id, user_name, password) values (#{sysUser.id}, #{sysUser.userName}, #{sysUser.password})
     </insert>
