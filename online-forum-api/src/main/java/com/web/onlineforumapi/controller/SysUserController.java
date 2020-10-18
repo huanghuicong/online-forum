@@ -20,7 +20,7 @@ public class SysUserController {
 
     @NoNeedLogin
     @GetMapping(value = "/findUser")
-    public ResultData getElectricityMonthReport() {
+    public ResultData findUser() {
         List<SysUser> userList = sysUserService.findUser();
         return ResultData.success(userList);
     }
