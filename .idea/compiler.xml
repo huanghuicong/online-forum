@@ -8,9 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="online-forum-service" />
-        <module name="online-forum" />
-        <module name="online-forum-common" />
         <module name="online-forum-api" />
+        <module name="online-forum-common" />
+        <module name="online-forum" />
       </profile>
     </annotationProcessing>
   </component>

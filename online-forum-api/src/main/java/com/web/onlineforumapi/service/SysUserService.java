@@ -7,4 +7,5 @@ import java.util.List;
 public interface SysUserService {
 
     public List<SysUser> findUser();
+
 }

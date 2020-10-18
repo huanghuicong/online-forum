@@ -19,5 +19,9 @@
         select id, user_name, password
         from sys_user where id = #{userId}
     </select>
+
+    <insert id="insertUser" parameterType="com.web.onlineforumapi.domain.SysUser">
+        insert into sys_user (id, user_name, password) values (#{sysUser.id}, #{sysUser.userName}, #{sysUser.password})
+    </insert>
 </mapper>
 

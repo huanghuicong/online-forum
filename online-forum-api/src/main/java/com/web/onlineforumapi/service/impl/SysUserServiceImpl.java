@@ -26,9 +26,23 @@ public class SysUserServiceImpl implements SysUserService {
     private RedisUtil redisUtil;
 
     @Override
-    public List<SysUser> findUser () {
+    public List<SysUser> findUser() {
         List<SysUser> sysUserList = sysUserDao.findUserList();
         return sysUserList;
     }
 
+    @Transactional
+    public void testTran() {
+        SysUser sysUser1 = new SysUser();
+        sysUser1.setId(4L);
+        sysUser1.setUserName("测试4");
+        sysUser1.setPassword("aseqweqweqweqwe1");
+        sysUserDao.insertUser(sysUser1);
+
+        SysUser sysUser = new SysUser();
+        sysUser.setId(1L);
+        sysUser.setUserName("测试");
+        sysUser.setPassword("aseqweqweqweqwe");
+        sysUserDao.insertUser(sysUser);
+    }
 }
