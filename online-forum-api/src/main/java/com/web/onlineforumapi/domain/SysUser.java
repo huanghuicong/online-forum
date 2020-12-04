@@ -5,6 +5,7 @@ public class SysUser {
     private Long id;
     private String userName;
     private String password;
+    private Long parentId;
 
     public Long getId() {
         return id;
@@ -28,5 +29,23 @@ public class SysUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Long getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
+    }
+
+    @Override
+    public String toString() {
+        return "SysUser{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", parentId=" + parentId +
+                '}';
     }
 }
