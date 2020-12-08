@@ -1,5 +1,11 @@
 package com.web.onlineforumapi.demo;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
@@ -26,5 +32,11 @@ public class TestMain {
         }
         System.out.println(sum);
         Map map = new ConcurrentHashMap();
+
+        List<Long> list = new ArrayList<>();
+        list.add(1L);
+        list.add(2L);
+        JSONObject jsonObject = (JSONObject) JSONArray.toJSON(list);
+        System.out.println(jsonObject);
     }
 }
