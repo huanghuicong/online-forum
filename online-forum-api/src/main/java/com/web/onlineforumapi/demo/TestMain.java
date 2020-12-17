@@ -31,12 +31,6 @@ public class TestMain {
             }
         }
         System.out.println(sum);
-        Map map = new ConcurrentHashMap();
 
-        List<Long> list = new ArrayList<>();
-        list.add(1L);
-        list.add(2L);
-        JSONObject jsonObject = (JSONObject) JSONArray.toJSON(list);
-        System.out.println(jsonObject);
     }
 }
