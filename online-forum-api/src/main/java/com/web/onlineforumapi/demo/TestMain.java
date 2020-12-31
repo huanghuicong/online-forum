@@ -39,6 +39,7 @@ public class TestMain {
         System.out.println(returnMap(sysUser));*/
        TestCh testCh = new TestCh();
        testCh.testPar();
+       testCh.testPar();
     }
 
 
