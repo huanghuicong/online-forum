@@ -39,13 +39,5 @@ public class SysUser {
         this.parentId = parentId;
     }
 
-    @Override
-    public String toString() {
-        return "SysUser{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", parentId=" + parentId +
-                '}';
-    }
+
 }

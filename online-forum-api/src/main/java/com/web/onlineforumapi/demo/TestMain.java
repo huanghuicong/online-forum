@@ -3,8 +3,10 @@ package com.web.onlineforumapi.demo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.web.onlineforumapi.domain.SysUser;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,7 +32,18 @@ public class TestMain {
                 break;
             }
         }
-        System.out.println(sum);
+       /* Map<String, Object> map2 = new HashMap<>();
+        SysUser sysUser = new SysUser();
 
+        System.out.println(sysUser);
+        System.out.println(returnMap(sysUser));*/
+       TestCh testCh = new TestCh();
+       testCh.testPar();
+    }
+
+
+    public static SysUser returnMap(SysUser sysUser) {
+        SysUser sysUser1 = new SysUser();
+        return sysUser;
     }
 }
