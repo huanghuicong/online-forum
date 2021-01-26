@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.concurrent.*;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
@@ -59,5 +60,6 @@ public class SysUserServiceImpl implements SysUserService {
         sysUser.setUserName("测试");
         sysUser.setPassword("aseqweqweqweqwe");
         sysUserDao.insertUser(sysUser);
+
     }
 }

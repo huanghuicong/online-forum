@@ -1,8 +1,6 @@
 package com.web.onlineforumapi.demo;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.*;
 
 public class TestThread {
     public static void main(String[] args) {
@@ -37,5 +35,12 @@ public class TestThread {
             }
         });
 
+        ExecutorService executorService2 = new ThreadPoolExecutor(1, 1, 5, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>(5));
+        executorService2.execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(11111);
+            }
+        });
     }
 }
