@@ -1,6 +1,7 @@
 package com.web.onlineforumapi.demo;
 
 import java.util.concurrent.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class TestThread {
     public static void main(String[] args) {
@@ -42,5 +43,7 @@ public class TestThread {
                 System.out.println(11111);
             }
         });
+        ReentrantLock rt = new ReentrantLock(true);
+        rt.lock();
     }
 }
