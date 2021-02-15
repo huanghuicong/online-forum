@@ -45,6 +45,7 @@ public class RecursionDemo {
         sysUserList.add(sysUser6);
 
         System.out.println(sysUserList);
+        System.out.println();
      }
 
      public void sysUsers(List<SysUser> sysUserList) {
